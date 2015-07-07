@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>学生--学习课程--在线测试</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<link rel="stylesheet" href="../../../public/style/student.css">
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/extend.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<h1>生态学习资源系统</h1>
+			<form action="#" method="get">
+				<input type="text" name="search" class="search" />
+				<input type="submit" value="" class="sbtn" />
+			</form>
+			<a href="#" id="login">登陆</a>
+			<a href="#" id="record">记录</a>
+		</div>
+	</div>
+	
+	<div class="nav">
+		<ul class="clearfix">
+			<li class="selected"><a href="#">首页</a></li>
+			<li><a href="#">精品课程<span></span></a></li>
+			<li><a href="#">微课程</a></li>
+			<li><a href="#">学习资源</a></li>
+			<li><a href="#">才艺展示</a></li>
+			<li><a href="#">辅导课程</a></li>
+			<li><a href="#">同步课堂</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="aside">
+			<div class="tcMsg">
+				<img src="../../../public/image/student/student.png" alt="" width="189px;" height="189px;" />
+				<h4><span><a href="">我的主页</a></span>王克楠</h4>
+				<span class="area">江苏苏州</span>
+				<span class="school">景程中学 初三(1)班</span>
+			</div>
+			<ul class="asideNav">
+				<li class="learnClass">
+					<a href="../xxkc-student/learnClass.html">
+						<span class="colorIcon"></span>学习课程
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTest">
+					<a href="onlineTest.html" class="selected">
+						<span class="colorIcon"></span>在线测试
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTeach">
+					<a href="../zxfd-student/onlineTutor.html">
+						<span class="colorIcon"></span>在线辅导
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineClass">
+					<a href="../tbkt-student/tbClassroom.html">
+						<span class="colorIcon"></span>同步课堂
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="mySource">
+					<a href="../wdzy-student/mySource.html">
+						<span class="colorIcon"></span>我的资源
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myInteraction">
+					<a href="../community/home.html">
+						<span class="colorIcon"></span>我的互动
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myClass">
+					<a href="../myclass/class.html">
+						<span class="colorIcon"></span>我的班级
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<h4 class="contentNav onlineTest">
+				<a href="javascript:;" class="btn selfTestZj">自测组卷</a>
+				在线测试
+				<span class="navTab">
+					<a href="javascript:;" class="currTab" index="0">测试作业</a>
+					<a href="javascript:;" index="1">自测试卷</a>
+				</span>
+			</h4>
+
+			<div class="tabBox currBox">
+				<ul class="mt20">
+					<li>
+						<label>发布时间：</label>
+						<input type="text" />
+						至：
+						<input type="text" />
+						<label>学科：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+					</li>
+					<li class="mt10">
+						<label>测试类型：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+
+						<label>试卷标题：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+
+						<a href="javascript:;" class="btn bgblue">搜索</a>
+					</li>
+				</ul>
+				<table id="tbTable" class="normalTable mt20">
+					<tr>
+						<th></th>
+						<th>完成时间</th>
+						<th>试卷名称</th>
+						<th>学科</th>
+						<th>测试类型</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+						</td>
+						<td>2014-1-27</td>
+						<td>诗歌《离骚》讲解</td>
+						<td>语文</td>
+						<td>每周测试</td>
+						<td class="red">未完成</td>
+						<td>
+							<a href="onlineTest-answer.html" class="blue">开始答题</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+						</td>
+						<td>2014-1-27</td>
+						<td>诗歌《离骚》讲解</td>
+						<td>语文</td>
+						<td>每周测试</td>
+						<td class="green">已完成</td>
+						<td>
+							<a href="javascript:;" class="blue">查看结果</a>
+							<a href="javascript:;" class="green">巩固测试</a>
+						</td>
+					</tr>
+				</table>
+				
+				<label class="mr20"><input type="checkbox" class="selectAll"  /> 全选</label>
+				<a href="" class="deleteAll orange">批量删除</a>
+				
+			</div>
+
+			<div class="tabBox">
+				自测试卷
+			</div>
+		</div>
+	</div>
+
+<script>
+	// 全选
+	function checkAll(){
+		 	var checkboxs = $tag("input[type=checkbox]",$id("tbTable")),
+		 		isCheck = $class("selectAll")[0].checked;
+			for(var i =0 ; i<checkboxs.length;i++ ){
+				checkboxs[i].checked = isCheck 
+			}
+		}
+
+	events.addEvent($class("selectAll"),"click",checkAll);
+
+	// 横向菜单切换
+	$(".navTab a").click(function(){
+		var i = this.getAttribute("index");
+		$(".currTab").removeClass("currTab");
+		$(".navTab a").eq(i).addClass("currTab");
+		$(".currBox").removeClass("currBox");
+		$(".tabBox").eq(i).addClass("currBox");
+	});
+
+</script>
+</body>
+</html>

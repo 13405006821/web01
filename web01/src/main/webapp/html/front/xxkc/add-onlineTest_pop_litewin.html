@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加在线测试弹出框</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/WdatePicker.js"></script>
+	<style type="text/css">
+		.navTab{border-bottom: 2px solid #90D964;font-size: 16px;margin-top: 20px;}
+	</style>
+</head>
+<body>
+
+	<h4 class="navTab">
+		<a href="javascript:;" class="currTab" index="0">我的试卷</a>
+		<a href="javascript:;" index="1">共享试卷</a>
+	</h4>
+ 
+	<div class="testContent">
+		<div class="tabBox myTest currBox">
+			<ul class="testSelect">
+				<li>
+					<label>创建时间：</label>
+					<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" />
+					至：
+					<input type="text" />
+					<label>学段：</label>
+					<select>
+						<option>请选择</option>
+						<option>高一</option>
+					</select>
+					<label>学科：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+					<label>年级：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+					<label>分册：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+				</li>
+				<li>
+					<label>章节：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+					<label>知识点：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+					<label>试卷类型：</label>
+					<select>
+						<option>请选择</option>
+					</select>
+					<a href="" class="btn bgblue testSer">搜索</a>
+				</li>
+			</ul>
+
+			<table class="normalTable">
+				<tr>
+					<th></th>
+					<th>考题</th>
+					<th>学科</th>
+					<th>答题时长</th>
+					<th>试卷类型</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" />
+					</td>
+					<td>诗歌《离骚》讲解</td>
+					<td>语文</td>
+					<td>120分钟</td>
+					<td>每周测试</td>
+					<td><a href="javascript:;">查看</a></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" />
+					</td>
+					<td>诗歌《离骚》讲解</td>
+					<td>语文</td>
+					<td>120分钟</td>
+					<td>每周测试</td>
+					<td><a href="javascript:;">查看</a></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" />
+					</td>
+					<td>诗歌《离骚》讲解</td>
+					<td>语文</td>
+					<td>120分钟</td>
+					<td>每周测试</td>
+					<td><a href="javascript:;">查看</a></td>
+				</tr>
+			</table>
+			<div class="submitBtn">
+				<a href="" class="btn">保存并返回</a>
+				<a href="" class="cancel">取消</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".navTab a").click(function(){
+			var i = this.getAttribute("index");
+			$(".currTab").removeClass("currTab");
+			$(".navTab a").eq(i).addClass("currTab");
+			$(".currBox").removeClass("currBox");
+			$(".tabBox").eq(i).addClass("currBox");
+		});
+	</script>
+</body>
+</html>

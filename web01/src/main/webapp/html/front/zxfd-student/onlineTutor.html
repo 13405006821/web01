@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>学生--学习课程--在线辅导</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<link rel="stylesheet" href="../../../public/style/student.css">
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/extend.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<h1>生态学习资源系统</h1>
+			<form action="#" method="get">
+				<input type="text" name="search" class="search" />
+				<input type="submit" value="" class="sbtn" />
+			</form>
+			<a href="#" id="login">登陆</a>
+			<a href="#" id="record">记录</a>
+		</div>
+	</div>
+	
+	<div class="nav">
+		<ul class="clearfix">
+			<li class="selected"><a href="#">首页</a></li>
+			<li><a href="#">精品课程<span></span></a></li>
+			<li><a href="#">微课程</a></li>
+			<li><a href="#">学习资源</a></li>
+			<li><a href="#">才艺展示</a></li>
+			<li><a href="#">辅导课程</a></li>
+			<li><a href="#">同步课堂</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="aside">
+			<div class="tcMsg">
+				<img src="../../../public/image/student/student.png" alt="" width="189px;" height="189px;" />
+				<h4><span><a href="">我的主页</a></span>王克楠</h4>
+				<span class="area">江苏苏州</span>
+				<span class="school">景程中学 初三(1)班</span>
+			</div>
+			<ul class="asideNav">
+				<li class="learnClass">
+					<a href="../xxkc-student/learnClass.html">
+						<span class="colorIcon"></span>学习课程
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTest">
+					<a href="../zxcs-student/onlineTest.html">
+						<span class="colorIcon"></span>在线测试
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTeach">
+					<a href="onlineTutor.html" class="selected">
+						<span class="colorIcon"></span>在线辅导
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineClass">
+					<a href="../tbkt-student/tbClassroom.html">
+						<span class="colorIcon"></span>同步课堂
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="mySource">
+					<a href="../wdzy-student/mySource.html">
+						<span class="colorIcon"></span>我的资源
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myInteraction">
+					<a href="../community/home.html">
+						<span class="colorIcon"></span>我的互动
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myClass">
+					<a href="../myclass/class.html">
+						<span class="colorIcon"></span>我的班级
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<h4 class="contentNav onlineTutor">
+				<a class="backup" href="#">&lt;&lt;返回</a>
+				在线辅导
+			</h4>
+
+			<div class="onlineTutorInner">
+				<ul class="mt20">
+					<li>
+						<label>学段：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+						<label class="setWidth">学科：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+						<label class="setWidth">年级：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+						<label class="setWidth">分册：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+					</li>
+					<li class="mt10">
+						<label>章节：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+
+						<label class="setWidth">知识点：</label>
+						<select>
+							<option>请选择</option>
+						</select>
+
+						<label class="setWidth">名称：</label>
+						<input type="text" />
+
+						<a href="javascript:;" class="btn bgblue">搜索</a>
+					</li>
+				</ul>
+				
+				<div class="workList clearfix mt20">
+					<div class="workBox">
+						<a href="" class="workPic">
+							<img src="../../../public/image/student/class.png" alt="" width="150px" height="175px">
+						</a>
+						<div class="workDetail">
+							<p class="title">
+								<a href="">苏大附中2014寒假班高二生物</a>
+							</p>
+							<p class="teacher">主讲教师: 苏大附中高二老师</p>
+							<p class="price">价格：<b class="orange">98</b>元</p>
+							<p class="time">上课时间: 2014年5月30日 9:30</p>
+							<a href="courseArrange.html" class="btn">课程安排</a>
+						</div>
+					</div>
+
+					<div class="workBox">
+						<a href="" class="workPic">
+							<img src="../../../public/image/student/class.png" alt="" width="150px" height="175px">
+						</a>
+						<div class="workDetail">
+							<p class="title">
+								<a href="">苏大附中2014寒假班高二生物</a>
+							</p>
+							<p class="teacher">主讲教师: 苏大附中高二老师</p>
+							<p class="price">价格：<b class="orange">98</b>元</p>
+							<p class="time">上课时间: 2014年5月30日 9:30</p>
+							<a href="" class="btn">课程安排</a>
+						</div>
+					</div>
+
+					<div class="workBox">
+						<a href="" class="workPic">
+							<img src="../../../public/image/student/class.png" alt="" width="150px" height="175px">
+						</a>
+						<div class="workDetail">
+							<p class="title">
+								<a href="">苏大附中2014寒假班高二生物</a>
+							</p>
+							<p class="teacher">主讲教师: 苏大附中高二老师</p>
+							<p class="price">价格：<b class="orange">98</b>元</p>
+							<p class="time">上课时间: 2014年5月30日 9:30</p>
+							<a href="" class="btn">课程安排</a>
+						</div>
+					</div>
+
+					<div class="workBox">
+						<a href="" class="workPic">
+							<img src="../../../public/image/student/class.png" alt="" width="150px" height="175px">
+						</a>
+						<div class="workDetail">
+							<p class="title">
+								<a href="">苏大附中2014寒假班高二生物</a>
+							</p>
+							<p class="teacher">主讲教师: 苏大附中高二老师</p>
+							<p class="price">价格：<b class="orange">98</b>元</p>
+							<p class="time">上课时间: 2014年5月30日 9:30</p>
+							<a href="" class="btn">课程安排</a>
+						</div>
+					</div>
+					
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

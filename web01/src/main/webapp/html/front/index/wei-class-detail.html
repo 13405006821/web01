@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>精品课程</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/index.css" />
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/extend.js"></script>
+	<script src="../../../public/js/photoScroll.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<a href="/stxx2"><h1 style="font-weight: bolder;">生态学习资源系统</h1></a>
+			<form action="#" method="get" onkeydown="if(event.keyCode==13){return false;}">
+				<input id="topsearchresult" value="" name="search" class="search" type="text">
+				<input id="topSearchSubmit" value="" class="sbtn" onclick="searchResultr();" type="button">
+			</form>
+			
+				
+					<a href="#" id="login">管理员</a>
+				
+				
+			
+			<!-- 登录前的loginTip -->
+			<div style="display: none;" class="loginTip" id="loginTip">
+				<p>登录个人中心，观看更多学习资源</p>
+				<button id="loginBtn">登 录</button>
+				<p class="border-t">
+					<a href="#" class="watchRecord comLoginBg"><span></span>观看记录</a>
+					<a href="#" class="myCollect comLoginBg"><span></span>我的收藏</a>
+				</p>
+			</div>
+			<!-- 登录后的loginTip -->
+			<div style="display: none;" class="loginTip" id="userLoginTip">
+				<ul>
+					<li>
+						
+							<a href="/stxx2/front/teaching/personalData.html" class="perMsg comLoginBg"><span></span>我的空间</a>
+						
+						
+						<a href="/stxx2/front/mycommunity/home.do?tabId=tabLetter" class="priLetter comLoginBg"><span></span>私信<font id="privateLeterNotReadCount" class="red">(0)</font></a>
+					</li>
+					<li>
+						<a href="/stxx2/front/mycommunity/home.do?tabId=tabFriend" class="myConcern comLoginBg"><span></span>我的关注</a>
+						<a href="/stxx2/front/recource/upload/uploadPre.html" class="upSource comLoginBg"><span></span>上传资源</a>
+					</li>
+					<li>
+						<a href="/stxx2/front/recource/history/top/list.html" class="watchRecord comLoginBg"><span></span>观看记录</a>
+						<a href="/stxx2/front/recource/favorite/top/list.html" class="myCollect comLoginBg"><span></span>我的收藏</a>
+					</li>
+				</ul>
+				<a href="javascript:;" class="loginOut" onclick="logout();">退出</a>
+			</div>
+			<a href="#" id="record">记录</a>
+			<div style="display: none;" class="recordTip">
+				
+					
+					
+						<p>你还没有任何学习记录！</p>
+					
+				
+			</div>
+		</div>
+	</div>
+	<script>
+		// 点击左侧菜单样式调整
+		$("#userLoginTip a").click(function (){
+			var pclass=$(this).attr("class");
+			if(pclass == 'perMsg comLoginBg'){
+				pclass ='';
+			}else if(pclass == 'priLetter comLoginBg' || pclass == 'myConcern comLoginBg'){
+				pclass ='myInteraction';
+			}else if(pclass == 'upSource comLoginBg' || pclass == 'watchRecord comLoginBg' || pclass == 'myCollect comLoginBg'){
+				pclass ='mySource';
+			}else{
+				pclass ='';
+			}
+			$.post("/stxx2/front/user/setLeftMenuSession.do",{'menuClass':pclass},function(data){});
+		});
+		
+		$(function(){
+			$('#topsearchresult').keydown(function(e){
+				if(e.keyCode==13){
+					$('#topSearchSubmit').click(); //处理事件
+				}
+			});
+		
+			//登录、记录弹出框
+			$("#login").mouseover(function(event){
+				event.stopPropagation();
+				$(".recordTip").hide();
+				$("#record").removeClass("selected");
+				
+					
+						$("#userLoginTip").toggle();
+					
+					
+				
+				$("#login").toggleClass("selected");
+			});
+			$("#record").mouseover(function(event){
+				event.stopPropagation();
+				$(".loginTip").hide();
+				$("#login").removeClass("selected");
+				$(".recordTip").toggle();
+				$("#record").toggleClass("selected");
+			});
+			$("body").mouseout(function(){
+				if($(".loginTip")){
+					$(".loginTip").css("display","none");
+					$(".recordTip").css("display","none");
+					$("#login").removeClass("selected");
+					$("#record").removeClass("selected");
+				} else {
+					$("#login").addClass("selected");
+					$("#record").addClass("selected");
+				}
+			});
+			$(".recordTip").mouseover(function(){
+				$(this).css("display","block");
+				$("#record").addClass("selected");
+			})
+			$(".loginTip").mouseover(function(){
+				$(this).css("display","block");
+				$("#login").addClass("selected");
+			})
+			
+			// 点击登录按钮
+			$("#loginBtn").click( 
+				function () { 
+					var _html ="<div class='tipInner'>"+"<input class='id' id='account' placeholder='请输入账号' />"+"<br>";
+					_html += "<input class='pwd' id='password' type='password' placeholder='请输入密码'/>"+"<br>";
+					_html += "<label><input type='checkbox' class='autoLogin' id='isValidate' value='1'/>"+"下次自动登录(七天内免登录)"+"</label><br>";
+					_html += "<button class='login' id='frontLogin' onclick='validateLogin();'/>登录</button>" + "</div>";
+					Win.open({id:'loginWin', html:_html, width:330,height:250,title:'登录'});
+					
+					// 点击用户名回车 跳转到密码输入框
+					$('#account').keydown(function(e){
+						if(e.keyCode==13){
+							$("#password").focus();
+						}
+					});
+					
+					// 点击密码回车 自动登录
+					$('#password').keydown(function(e){
+						if(e.keyCode==13){
+							validateLogin(); //处理事件
+						}
+					});
+					
+					// 点击免登陆选择框 自动登录
+					$('#isValidate').keydown(function(e){
+						if(e.keyCode==13){
+							validateLogin(); //处理事件
+						}
+					});
+					
+					// 打开光标锁定用户名输入框
+					$("#account").focus();
+				}
+			);
+		});
+		
+		// 检查用户名 密码是否输入
+		function check(){
+	        var uid = $.trim($("#account").val());
+	        var psd = $("#password").val(); 
+	        if(uid==""){
+	        	alert("请输入用户名！");
+	            $("#account").focus();
+	            return false;
+	        };
+	        if(psd==""){
+	        	alert("请输入密码！");
+	            $("#password").focus();
+	            return false;
+	        };
+	        return true;
+	    };
+	    
+	    // 验证用户名 密码正确性
+	    function validateLogin(){
+	    	var account = $('#account').val();
+			var password = $('#password').val();
+			var isValidate = document.getElementById('isValidate').checked;
+			//验证输入是否符合格式要求
+	        if(check()){
+				$.post("/stxx2/front/user/validateLogin.do",
+					{'account':account,'password':password,'isValidate':isValidate},
+					function(r){
+						if(!r.result) {
+							alert("用户名或密码错误！");
+						}else{
+							window.location.reload();
+						}
+					}, 'json'
+				);
+			};
+		}
+		
+		// 退出系统
+	    function logout(){
+			$.post("/stxx2/front/user/logout.do",{},
+				function(r){
+					window.location.href = "/stxx2";
+				}
+			);
+		}
+	    
+	    function searchResultr(){
+	    	var value = $(".search").val();
+	    	value = value.trim();
+	    	if(value == ""){
+	    		alert("请输入搜索的关键字！");
+	    		return false;
+	    	} else {
+	    		window.location.href = "/stxx2/front/search/query.html?v="+value;
+	    		//forTypeSearch();
+	    		return true;
+	    	}
+	    }
+	    
+	    String.prototype.trim=function() {
+	        return this.replace(/(^\s*)|(\s*$)/g,'');
+	    }
+	    
+	    // 验证登录
+	    function checkLogin(){
+	    	// 判断用户是否登录
+			
+			return true;
+	    }
+	    //获取未读私信数目
+	    function ajaxGetPrivateLetterNotReadCount(){
+	     if(checkLogin()){
+	        $.ajax({                                                                                                                                           
+				url: "/stxx2/front/mycommunity/ajaxGetPrivateLetterNotReadCount.do",                                                                    
+				cache:false, 
+				dataType:"text",                                                                                                                                     
+				success: function(data){  
+				        $("#privateLeterNotReadCount").html("("+data+")");   
+				},                                                                                                                                                
+				error: function(data) {      
+				    Win.alert('获取未读私信信息失败！');                                                                                                                     
+				}                                                                                                                                                 
+			});
+	     }
+	   }
+	   if(checkLogin()){
+	      ajaxGetPrivateLetterNotReadCount(); 
+	   }  
+	</script>
+
+<div class="nav">
+	<ul class="clearfix">
+		<li><a href="/stxx2/index.html">首页</a></li>
+		<li><a href="/stxx2/front/top/index.html">精品课<span></span></a></li>
+		<li class="selected"><a href="/stxx2/front/micro/index.html">微课</a></li>
+		<li><a href="/stxx2/front/resource/index.html">元资源</a></li>
+		<li><a href="/stxx2/front/art/index.html">才艺展示</a></li>
+		<li><a href="/stxx2/front/onlineCourse/index.html">辅导课程</a></li>
+		<li><a href="/stxx2/front/syncCourse/index.html">同步课堂</a></li>
+	</ul>
+</div>
+	<link rel="stylesheet" href="/stxx2/public/style/index.css">
+	<link rel="stylesheet" href="/stxx2/public/jquery-prettyPhoto-3.1.5/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+	<script src="/stxx2/public/jquery-prettyPhoto-3.1.5/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	<div class="content clearfix">
+		<div class="secNav">
+			<h5>
+				<span>
+				
+				
+				微课
+				
+				
+				</span>&gt;
+				<span>ddddd</span>
+			</h5>
+		</div>
+		<div class="classBook clearfix">
+		 <div class="information-top clearfix">
+		 		
+					<div class="photo" id="videoBox" style="width:800px;height:475px;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=11,0,0,0" id="swf1405499611360" height="100%" width="100%"><param name="wmode" value="transparent"><param value="true" name="allowFullScreen"><param value="all" name="AllowNetworking"><param value="always" name="allowScriptAccess"><param name="AllowNetworking" value="all"><param value="true" name="allowFullscreenInteractive"><param name="movie" value="/stxx2/public/flash/myflvPlayBack.swf"><param name="FlashVars" value="skin=/stxx2/public/flash/MinimaFlatCustomColorAll.swf&amp;thumb=/stxx2/front/image.html?id=225"><embed src="/stxx2/public/flash/myflvPlayBack.swf" name="swf1405499611360" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" allownetworking="all" allowfullscreen="true" allowfullscreeninteractive="true" allowscriptaccess="always" flashvars="skin=/stxx2/public/flash/MinimaFlatCustomColorAll.swf&amp;thumb=/stxx2/front/image.html?id=225" wmode="transparent" height="100%&quot;" width="100%"></object></div>
+				
+				
+				
+				
+				
+				
+				<div class="class-information">
+					<h4>ddddd</h4>
+					<ul>
+						<li>
+							<label for="" class="mr20">评分：</label>
+							<label for=""><span class="orange">0.0分</span></label>
+						</li>
+						
+						
+						
+						
+						<li>
+							<label for="" class="mr20">学段：<span>初中</span></label>
+							<label for="">知识点：<span></span></label>
+						</li>
+						<li>
+							<label for="" class="mr20">年级：<span></span></label>
+							<label for="">发布时间：<span>2014-07-07</span></label>
+						</li>
+						<li>
+							<label for="" class="mr20">学科：<span></span></label>
+							<label for="">发布人：<span>管理员</span></label>
+						</li>
+						<li>
+							<label for="" class="mr20">分册：<span></span></label>
+							
+							
+							<label for="">时长：<span>3分37秒</span></label>
+							
+						</li>
+						<li>
+							<label for="">章节：<span></span></label>
+						</li>
+						
+						<li>
+							&nbsp;
+						</li>
+						<li>
+							<p><span>简介：</span>dddddddddddddddddddd</p>
+						</li>
+						<li>
+							&nbsp;
+						</li>
+						<li>
+							<label for="" class="mr20">播放次数：<span class="orange">42</span></label>
+							<label for="">收藏次数：<span class="orange">0</span></label>
+						</li>
+						<li>
+							<label for="" class="mr20">下载次数：<span class="orange">4</span></label>
+							<label for="">查看次数：<span class="orange">42</span></label>
+						</li>
+					</ul>
+					<p class="btnP">
+						<span class="videoFormat">
+							
+							<a href="javascript:;" class="videoBtn " onclick="myPlayer.playFile('/stxx2/front/highDefine/225.html')">高清</a>
+							
+							
+							<a href="javascript:;" class="videoBtn mr20" onclick="myPlayer.playFile('/stxx2/front/middleDefine/225.html')">标清</a>
+							
+						</span>
+					
+						
+						
+						 
+						
+						
+						<a href="javascript:choseDownload(225)" class="btn">下载</a>
+						
+						
+						
+						<a href="javascript:;" onclick="favoriteResource()" class="orange">+收藏</a>
+					</p>
+					
+				</div>
+			<!-- </div> -->
+		</div>
+
+		<div class="clsPrimary">
+			
+			
+			
+			<div class="clsBox yhpl">
+				<h4 class="container-nav">
+					<b>用户评论</b>
+					<span></span>
+				</h4>
+				
+				<div id="commentNew">
+
+				
+				<div>
+				<label>评分：</label>
+					
+					
+					<ul class="star-rating">
+					<li class="current-rating"></li>
+					<li><a href="javascript:;" title="1" class="star1" hidefocus="true"></a></li>   
+					<li><a href="javascript:;" title="2" class="star2" hidefocus="true"></a></li>  
+					<li><a href="javascript:;" title="3" class="star3" hidefocus="true"></a></li>  
+					<li><a href="javascript:;" title="4" class="star4" hidefocus="true"></a></li> 
+					<li><a href="javascript:;" title="5" class="star5" hidefocus="true"></a></li>
+					<li><a href="javascript:;" title="6" class="star6" hidefocus="true"></a></li>   
+					<li><a href="javascript:;" title="7" class="star7" hidefocus="true"></a></li>  
+					<li><a href="javascript:;" title="8" class="star8" hidefocus="true"></a></li>  
+					<li><a href="javascript:;" title="9" class="star9" hidefocus="true"></a></li> 
+					<li><a href="javascript:;" title="10" class="star10" hidefocus="true"></a></li>
+					</ul>
+					
+				</div>
+				
+				
+				<label>评论：</label>
+				<div class="comment">
+					
+					<textarea id="commentContent" maxlength="500"></textarea>
+					<button class="btn" onclick="addComment();">发表</button>
+					<span id="faceBtn" class="face">表情</span>
+					
+					
+				</div>
+</div>
+
+				<div class="leaveMsg" id="commentContainer">
+
+
+
+					
+					
+</div>
+			</div>
+		</div>
+		<div class="clsSecondary">
+
+			<div class="clsBox xgkctj">
+				<h4 class="container-nav">
+					<b>相关资源</b>
+					<span></span>
+				</h4>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		// 高清标清切换
+		$(".videoFormat>.videoBtn").click(function(){
+			$(this).addClass("selected").siblings().removeClass("selected");
+		})
+		
+		$(document).ready(function (){
+    		searchResource(1);
+    		loadComment();
+			
+    		
+    			window.myPlayer = new FlashPlayer($id("videoBox"), "/stxx2/public/flash/myflvPlayBack.swf?skin=/stxx2/public/flash/MinimaFlatCustomColorAll.swf&thumb=/stxx2/front/image.html?id=225");
+    			//myPlayer.playFile("/stxx2/front/highDefine/225.html");
+    		
+    	});
+		
+		function choseDownload(id){
+			Win.open({
+				id:"choseDownload",
+				title:"选择清晰度",
+				mask:true,
+				width:250,
+				height:80,
+				url:"/stxx2/front/choseDefine.html?id="+id
+			});
+		}
+
+		function onWritePadCompleted(){
+			document.docPad.doPad({'act':'ShowDoc','id':"225","ft":"docx"});
+		}
+		
+		var starCount = 0;
+		function loadComment(){
+			$.get("../../commentPre.html?id=225", function(result){
+				if (result.length>0){
+					$("#commentNew").html(result);
+					var curRating = $(".current-rating");
+					$(".star-rating a").hover(function(){
+						curRating.hide();
+					},function(){
+						curRating.show();
+					}).click(function(){
+						starCount = parseInt($(this).attr("title"));
+						var curWidth= starCount / 2 * 16;
+						curRating.width(curWidth);
+					});
+					$("#faceBtn").click(function(event){
+						smile.show(event,$id("commentContent"),'/stxx2'); 
+					});
+				}
+			});
+		}
+		
+		function favoriteResource(){
+			$.post("../../favorite.html?id=225" , {}, function(result){
+				if (result.result){
+					Win.alert(result.message);
+				} else {
+					Win.alert(result.message);
+				}
+			}, "json");
+		}
+		
+		function addComment(){
+			var comment = $("#commentContent").val();
+			$.post("../../commentAdd.html?id=225" , {"comment":comment, "evaluate":starCount}, function(result){
+				if (result.result){
+					loadComment();
+					searchResource(1);
+				} else {
+					Win.alert(result.message);
+				}
+			}, "json");
+		}
+		
+		function searchResource(page){
+			$.get("../../comment.html?id=225&rows=6&page=" + page, function(result){
+				if (result.length>0){
+					$("#commentContainer").html(result);
+				}
+			});
+		}
+	</script>
+
+	<div class="footer">
+		<p><a href="">校内网</a>|<a href="">网站导航</a>|<a href="">开放平台</a>|<a href="">意见反馈</a></p>
+		<p>CopyRight&copy;2007-2015阔地网络科技有限公司 增值电信业务经营许可证苏B2-20100157</p>
+	</div>
+
+</div>
+</body>
+</html>

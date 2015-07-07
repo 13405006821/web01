@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>学习课程--查看作业</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/extend.js"></script>
+	<script src="../../../public/js/litewin.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<h1>生态学习资源系统</h1>
+			<form action="#" method="get">
+				<input type="text" name="search" class="search" />
+				<input type="submit" value="" class="sbtn" />
+			</form>
+			<a href="#" id="login">登陆</a>
+			<a href="#" id="record">记录</a>
+		</div>
+	</div>
+
+	<div class="nav">
+		<ul class="clearfix">
+			<li class="selected"><a href="#">首页</a></li>
+			<li><a href="#">精品课程<span></span></a></li>
+			<li><a href="#">微课程</a></li>
+			<li><a href="#">学习资源</a></li>
+			<li><a href="#">才艺展示</a></li>
+			<li><a href="#">辅导课程</a></li>
+			<li><a href="#">同步课堂</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="aside">
+			<div class="tcMsg">
+				<img src="../../../public/image/testImg/tcPhoto.png" alt="" width="189px;" height="189px;" />
+				<h4><span>我的主页</span>张亚杰</h4>
+				<span class="area">江苏</span>
+				<span class="school">景程中学</span>
+			</div>
+			<ul class="asideNav">
+				<li class="learnClass"><a class="selected" href="">学习课程</a></li>
+				<li class="onlineTest"><a href="">在线测试</a></li>
+				<li class="onlineTeach"><a href="">在线辅导</a></li>
+				<li class="onlineClass"><a href="">同步课堂</a></li>
+				<li class="mySource"><a href="">我的资源</a></li>
+				<li class="myInteraction"><a href="">我的互动</a></li>
+				<li class="myClass"><a href="">我的班级</a></li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<h4 class="contentNav"><a class="backup" href="#">&lt;&lt;返回</a>查看测验</h4>
+			<ul class="detailBox checkDetail noUnderline">
+				<li>
+					<label class="cName">作业名称：</label>
+					<h5 class="cCont">诗歌《离骚》讲解</h5>
+				</li>
+				<li>
+					<label class="cName">作业内容：</label>
+					<p class="cCont">“离骚者，犹离忧也”。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
+				</li>
+				<li>
+					<label for="" class="cName">调查时间：</label>
+					<span class="cCont"><b>2014-5-26 9:00:00</b> 至 <b>2014-5-28 9:00:00</b> 距结束时间还有：<b>5小时</b></span>
+				</li>
+				<li>
+					<label class="cName">附件：</label>
+					<div class="cCont">
+						<p>
+							<span class="cCont downLoad">诗歌《离骚》讲解.doc </span>
+							<span>大小12m</span> 
+							<a href="" class="downLink">下载</a>
+						</p>
+					</div>
+				</li>
+				<li class="underline">
+					<label class="cName">完成时间：</label>
+					<span class="cCont">2014-5-26</span>
+				</li>
+				<li>
+					<label class="cName">当前提交人数：</label>
+					<span class="cCont nums">3/56人</span>
+				</li>
+
+				
+				<table class="subTable">
+					<tr>
+						<th>ID</th>
+						<th>班级</th>
+						<th>姓名</th>
+						<th>提交时间</th>
+						<th>操作</th>
+						<th>得分</th>
+					</tr>
+					<tr>
+						<td>130619</td>
+						<td>高三（1）班</td>
+						<td>陈小小</td>
+						<td>2014-05-16 13:30</td>
+						<td class="corr"><a href="javascript:;">批改</a></td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>130619</td>
+						<td>高三（1）班</td>
+						<td>陈小小</td>
+						<td>2014-05-16 13:30</td>
+						<td class="corr"><a href="javascript:;">批改</a></td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>130619</td>
+						<td>高三（1）班</td>
+						<td>陈小小</td>
+						<td>2014-05-16 13:30</td>
+						<td class="checkCor"><a href="javascript:;">查看</a></td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>130619</td>
+						<td>高三（1）班</td>
+						<td>陈小小</td>
+						<td>2014-05-16 13:30</td>
+						<td class="checkCor"><a href="javascript:;">查看</a></td>
+						<td>100</td>
+					</tr>
+				</table>
+		
+			</ul>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+		function checkCor() {
+			Win.open({
+				url:'checkWork_pop_litewin.html',
+				width:500,
+				height:400,
+				title:'查看批改'
+			});
+		}
+		function correct() {
+			Win.open({
+				url:'checkWork_pop2_litewin.html',
+				width:500,
+				height:400,
+				title:'批改作业'
+			});
+		}
+
+		events.addEvent($class("checkCor"),'click',checkCor);
+		events.addEvent($class("corr"),'click',correct);
+	});
+	</script>
+</body>
+</html>

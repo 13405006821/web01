@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>学生--学习课程--在线测试--答题页面</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<link rel="stylesheet" href="../../../public/style/student.css">
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+	<script src="../../../public/js/extend.js"></script>
+	<script src="../../../public/js/litewin.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<h1>生态学习资源系统</h1>
+			<form action="#" method="get">
+				<input type="text" name="search" class="search" />
+				<input type="submit" value="" class="sbtn" />
+			</form>
+			<a href="#" id="login">登陆</a>
+			<a href="#" id="record">记录</a>
+		</div>
+	</div>
+	
+	<div class="nav">
+		<ul class="clearfix">
+			<li class="selected"><a href="#">首页</a></li>
+			<li><a href="#">精品课程<span></span></a></li>
+			<li><a href="#">微课程</a></li>
+			<li><a href="#">学习资源</a></li>
+			<li><a href="#">才艺展示</a></li>
+			<li><a href="#">辅导课程</a></li>
+			<li><a href="#">同步课堂</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="aside">
+			<div class="tcMsg">
+				<img src="../../../public/image/student/student.png" alt="" width="189px;" height="189px;" />
+				<h4><span><a href="">我的主页</a></span>王克楠</h4>
+				<span class="area">江苏苏州</span>
+				<span class="school">景程中学 初三(1)班</span>
+			</div>
+			<ul class="asideNav">
+				<li class="learnClass">
+					<a href="../xxkc-student/learnClass.html">
+						<span class="colorIcon"></span>学习课程
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTest">
+					<a href="onlineTest.html" class="selected">
+						<span class="colorIcon"></span>在线测试
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineTeach">
+					<a href="../zxfd-student/onlineTutor.html">
+						<span class="colorIcon"></span>在线辅导
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="onlineClass">
+					<a href="../tbkt-student/tbClassroom.html">
+						<span class="colorIcon"></span>同步课堂
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="mySource">
+					<a href="../wdzy-student/mySource.html">
+						<span class="colorIcon"></span>我的资源
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myInteraction">
+					<a href="../community/home.html">
+						<span class="colorIcon"></span>我的互动
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+				<li class="myClass">
+					<a href="../myclass/class.html">
+						<span class="colorIcon"></span>我的班级
+						<span class="arrowsIcon">--></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<h4 class="contentNav onlineTest">
+				在线测试
+			</h4>
+			
+			<ul class="onlineTestDetail">
+				<li>
+					<label for="">学段:</label>初中
+					<label for="" class="ml40">学科:</label>语文
+					<label for="" class="ml40">年级:</label>初一
+					<label for="" class="ml40">分册:</label>上册
+					<label for="" class="ml40">章节:</label>离骚
+					<label for="" class="ml40 countDown">倒计时: <span>01:59:59</span></label>
+				</li>
+				<li>
+					<label for="">知识点：</label>汉语言文学
+					<label for="" class="ml40">答题时间：</label>120分钟
+				</li>
+			</ul>
+
+			<div class="testPart">
+				<div class="singleChoice">
+					<h5>一、单选题</h5>
+					<ul class="mb20 timu">
+						<li class="mb10 mt10">
+							1、离骚的作者是谁
+							<span class="testDifficulty">
+								难度系数：
+								<b class="orange">3</b>
+							</span>
+						</li>
+						<li>
+							<input type="radio" name="choice1" />
+							<label class="len60">选项A：</label>陶渊明
+						<li>
+						<li>
+							<input type="radio" name="choice1" />
+							<label class="len60">选项B：</label>李白
+						</li>
+						<li>
+							<input type="radio" name="choice1" />
+							<label class="len60">选项C：</label>屈原
+						</li>
+						<li>
+							<input type="radio" name="choice1" />
+							<label class="len60">选项D：</label>杜甫
+						</li>
+						<img src="../../../public/image/testImg/test.png" alt="" />
+					</ul>
+				</div>
+
+				<div class="multiChoice">
+					<h5>二、多选题</h5>
+					<ul class="mb20 timu">
+						<li class="mb10 mt10">1、离骚的作者是谁
+							<span class="testDifficulty">难度系数：<b class="orange">3</b></span>
+						</li>
+						<li>
+							<input type="checkbox" />
+							<label class="len60">选项A：</label>陶渊明
+						<li>
+						<li>
+							<input type="checkbox" />
+							<label class="len60">选项B：</label>李白
+						</li>
+						<li>
+							<input type="checkbox" />
+							<label class="len60">选项C：</label>屈原
+						</li>
+						<li>
+							<input type="checkbox" />
+							<label class="len60">选项D：</label>杜甫
+						</li>
+						<img src="../../../public/image/testImg/test.png" alt="" />
+					</ul>
+				</div>
+
+				<div class="submitBtn">
+					<a href="javascript:;" class="btn uploadAnswer">提交答案</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 确认弹出框
+		$(document).ready(function(){
+			function confirmOk() {
+					_html = "<p style='text-align:center;margin-top:30px;font-size:14px;'>习题已答完，确认要提交吗</p>";
+					_html += "<div style='text-align:center;margin-top:20px;;font-size:14px;'><a href='javascript:;' class='btn mr20'>确认提交</a>";
+					_html += "<a href='javascript:;' class='btn'>稍后提交</a></div>";
+					Win.open({
+						
+						// url:'checkWork_pop_litewin.html',
+						html:_html,
+						
+						width:300,
+						height:200,
+						title:'确认提示'
+					});
+				}
+			events.addEvent($class("uploadAnswer"),'click',confirmOk);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* 学生空间共用部分 */
+body{background: #D6EAF4 url(../image/student/studentBg.png) repeat-x 0 0;}
+.header{background-color: #cedee8}
+.container{border-bottom: none;}
+.aside{background: none;margin-right: 10px;}
+.tcMsg{border: 8px solid #43afca;margin-bottom:10px;}
+/*.tcMsg h4{background-image: url(../image/st.gif);}*/
+/*.stMsg #nav_userName{background-image: url(../image/st.gif);}*/
+.asideNav li{border: none;margin-bottom: 10px;background-color: #fff;}
+.asideNav li a{position: relative;background-image: none;padding-left: 78px;}
+.asideNav .colorIcon{width: 60px;height: 60px;position:absolute;left: 0;top:0;background: url(../image/slideNav-student.png) 0 0;}
+.asideNav .arrowsIcon{height: 60px;position: absolute;right:5px;top: 0;display: none;}
+.asideNav .selected .arrowsIcon{display: inline-block;}
+
+.asideNav .learnClass .colorIcon{background-position: 0 0;}
+.asideNav .onlineTest .colorIcon{background-position: 0 -80px;}
+.asideNav .onlineTeach .colorIcon{background-position: 0 -160px;}
+.asideNav .onlineClass .colorIcon{background-position: 0 -240px;}
+.asideNav .mySource .colorIcon{background-position: 0 -320px;}
+.asideNav .myInteraction .colorIcon{background-position: 0 -400px;}
+.asideNav .myClass .colorIcon{background-position: 0 -480px;}
+
+.asideNav li.learnClass a{color: #cf4d4d;}
+.asideNav li.onlineTest a{color: #cf813b;}
+.asideNav li.onlineTeach a{color: #d1b546;}
+.asideNav li.onlineClass a{color: #5ac74b;}
+.asideNav li.mySource a{color: #28a5d9;}
+.asideNav li.myInteraction a{color: #4257c2;}
+.asideNav li.myClass a{color: #7b4ec5;}
+
+.asideNav li.learnClass a.selected{background-color: #fff;color: #cf4d4d;}
+.asideNav li.onlineTest a.selected{background-color: #fff;color: #cf813b;}
+.asideNav li.onlineTeach a.selected{background-color: #fff;color: #d1b546;}
+.asideNav li.onlineClass a.selected{background-color: #fff;color: #5ac74b;}
+.asideNav li.mySource a.selected{background-color: #fff;color: #28a5d9;}
+.asideNav li.myInteraction a.selected{background-color: #fff;color: #4257c2;}
+.asideNav li.myClass a.selected{background-color: #fff;color: #7b4ec5;}
+
+.contentNav{background: url(../image/contentNav-student.png) no-repeat;padding-left: 40px;padding-right: 10px;color: #888;}
+.contentNav .backup{color: #666;float: right;font-size:13px; font-weight:normal;}
+
+.learnClass{border-bottom: 2px solid #cf4d4d;background-position: 0px 6px;}
+.onlineTest{border-bottom: 2px solid #cf813b;background-position: 0px -34px;}
+.onlineTutor{border-bottom: 2px solid #d1b546;background-position: 0px -74px;}
+.tbClassroom{border-bottom: 2px solid #5ac74b;background-position: 0px -114px;}
+.mySource{border-bottom: 2px solid #28a5d9;background-position: 0px -154px;}
+.myHd{border-bottom: 2px solid #4257c2;background-position: 0px -194px;}
+.myclass{border-bottom: 2px solid #7b4ec5;background-position: 0px -234px;}
+
+.addFace, .face {
+    background: url("../image/community/face.gif") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
+}
+.addFace, .addPic, .face {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    overflow: hidden;
+    padding-left: 25px;
+    position: relative;
+}
+/* 学习课程栏目
+--------------------------------------------*/
+/* 学习课程 */
+.secTitle h5{border-bottom: 1px solid #cf4d4d;padding-bottom: 2px;}
+.secTitle h5 a{padding: 3px 20px;font-size: 14px;background-color: #ccc;color: #fff;margin-right: 2px;border-radius: 5px 5px 0 0;}
+.secTitle h5 a.selected{background-color: #cf4d4d;color: #fff;}
+.listBox{border: none;}
+.listBox h4{background: url(../image/student/listIcon.png) no-repeat 0 4px;cursor:pointer;}
+.listBox h4.show{background-position: 0 -16px;}
+.listBox h5{padding-left:15px;background: url(../image/student/triangleIcon.png) no-repeat 0 7px;}
+.listBox h5.show{background-position: 0px -20px;}
+
+/* 课程名称 */
+.classList{font-size: 14px;}
+.classBox{padding-top: 10px;padding-right: 20px;}
+.classList p,
+.classList ul{text-indent: 2em;}
+.classList ul li{line-height: 20px;}
+.classList ul li a{color: #59a9d2}
+
+/* 学习任务单 */
+/* .planBox p{text-indent: 2em;} */
+
+/* 在线作业 */
+.answerBox{background-color: #ddd;border-radius: 10px;margin-bottom: 20px;}
+.answer textarea{width: 600px;height: 80px;}
+.loadingBar{display: inline-block;width: 200px;height:20px;margin-right: 10px;background-color: #fff;vertical-align: middle;}
+.uploadBox p{height: 40px;}
+
+/* 互动评价 */
+.eMleaMsg textarea{width: 700px;height: 100px;}
+.eMleaMsg a{display: block;}
+.emMsg-st{width: 100%;}
+/* 在线测试栏目
+--------------------------------------------*/
+/* 在线测试 */
+.selfTestZj{float: right;line-height: 20px;margin-top: 15px;}
+.navTab a{background-color: #aaa;}
+.onlineTest .navTab .currTab {background-color: #cf813b;}
+
+.onlineTestDetail li{height: 40px;line-height: 40px;font-size: 14px;}
+.countDown{border: 1px dashed #f00;background-color: #ef9b0f;padding: 2px 5px;}
+.countDown span{color: #fff;}
+.testDifficulty{margin-left: 100px;}
+.onlineTestDetail{margin-top: 20px;}
+
+/* 同步课堂栏目
+--------------------------------------------*/
+/* 同步课堂 */
+.tbClassroom .navTab .currTab{background-color: #5ac74b;}
+
+/* 我的资源栏目
+--------------------------------------------
+/* 我的资源 */
+.mySource .navTab .currTab{background-color: #28a5d9;}

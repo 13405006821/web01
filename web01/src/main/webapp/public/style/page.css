@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+#flip{padding:10px;overflow:hidden;zoom:1;}
+#flip .pageInfo,#flip .pagination{float:right;}
+#flip .pageInfo{height:30px;line-height:30px;color:#a8a8a8;}
+#flip .pageInfo span{color:#34495e}
+#flip .pagination{padding:3px 0;margin-right:20px;}
+#flip .delect{color:#FF0000;font-family:Arial;}
+#flip .pageL{float:left;height:30px;line-height:30px;font-size:14px;}
+#flip .pageL .opt{display:inline-block;width:70px;height:30px;line-height:30px;text-align:center;background:url('/public/img/classroom/admin/btn_03.png') no-repeat;}
+
+.sInfo .sIcon{color:#8894a0;font-size:12px;overflow:hidden;zoom:1;margin-top:10px;}
+.sInfo .sIcon dt{float:left;display:inline;margin-right:5px;}
+.sInfo .sIcon dd{overflow:hidden;zoom:1;}
+.sInfo .sBtn{margin-top:12px;}
+
+.sInfo dd a{color:#ef9b0f;font-size:14px;text-decoration:none;}
+.aTxt a{color:#74828d;font-weight:bold;font-size:14px;line-height:25px;font-weight:normal;word-wrap:break-word;}
+.bTxt,.cTxt{color:#9b9b9b;font-size:18px;line-height:35px;font-weight:normal;}
+.cTxt{border-bottom:1px solid #dcdcdc;}
+.sList{margin-top:14px;}
+.sList li{color:#74828d;font-size:14px;line-height: 23px;width:230px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden;}
+.sList li a{color:#74828d;text-decoration:none;}
+.sList li a:hover{text-decoration:underline;}
+
+/* 用户空间首页 */
+.homeRight .bTxt{margin-bottom:20px;border-bottom:1px solid #DCDCDC;}
+.homeRight .bTxt .more{float:right;font-size:14px;color:#9b9b9b;text-decoration:none;}
+.recList li{overflow:hidden;zoom:1;margin-bottom:10px;}
+.recList li img{float:left;display:inline;width:120px;height:90px;margin-right:10px;}
+.recList li h6{height:55px;line-height:20px;overflow:hidden;}
+.recList li h6 a{font-size:14px;color:#617282;text-decoration:none;}
+.recList li p{color:#9b9b9b;}
+.recList li p b{color:#ed8b0c;font-weight:normal;}
+.playIcon{display:inline-block;width:11px;height:11px;background:url(../img/index/arr.gif) no-repeat;}
+
+/* 在线测试 */
+.submitBox {
+    padding: 60px 0;
+    text-align: center;
+    width: 400px;
+}
+.submitBox input {
+    background: none repeat scroll 0 0 #EF9B0F;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    /*font: 18px/38px "微软雅黑";*/
+    height: 38px;
+    width: 146px;
+    font-size: 18px;
+}
+.examTime{position:absolute;right: 0;top: 50px;padding:5px 10px;border:1px dashed #f09a0f;background:#ef9b0f;color:#fff;border-radius: 5px;}
+.examTime a{color:#fff;font-size: 16px;}
+.examTime b{color:#5c6b83;font-weight:normal;font-size: 16px;}
+#divmss{font-size: 16px;}
+.viewQuestion{padding:10px;font-size: 15px;line-height: 26px;color:#7B8898;}
+.viewQuestion .quesList li{position:relative;margin-bottom:20px;word-wrap: break-word;}
+.quesList .quesImg{position:absolute;top:5px;right:20px;}
+.tester{text-align:right;font-size:15px;padding-right:10px;color:#7B8898;}
+
+.v_options{margin-left: 160px;}
+.lightbox label{display: block;margin-right: 160px;}
+.multi{margin-right: 160px;}
+
+.lightbox label,
+.lightbox div{padding-right: 160px;}
+
+.tabTop{height:36px;margin-bottom:-1px;padding-top:5px;}
+.tabTop a{display:inline-block;width:121px;height:36px;line-height:36px;text-align:center;color:#fff;font-size:18px;text-decoration:none;background:url(../img/index/img_02.png) no-repeat;}
+.tabTop a.current{background-position:0 -36px;}
+.quesList #courseIntro,.quesList #coursePlan{height:80px;overflow:auto;padding:5px;border:1px solid #ccc;background:#fff;border-radius:0 5px 5px 5px;}
+.quesList .courseIntro,.quesList .coursePlan{display:none;font-size:13px;}
+.quesList #courseIntro .courseIntro,.quesList #coursePlan .coursePlan{display:block;}
+
+.waitCourseNav{color:#9b9b9b;font-size:16px;font-weight:normal;padding-bottom:10px;}
+.waitCourseNav #lstarttime{float:right;border:0;color:#4693c7;padding:5px 0 5px 25px;width:78px;background:url(../img/common/time.jpg) 0 50% no-repeat;}
+.waitCourseNav .waitmenu{display:inline-block;font-size:12px;text-align:center;height:20px;line-height:20px;width:123px;background:url(../img/common/timemenu.png) 0 -25px no-repeat;}
+.waitCourseNav .waitmenu a{color:#a2adb3;}
+.waitCourseNav .waitmenu .wait1{color:#fff;}
+#waitCourseNav1 .waitmenu {background-position:0 0;}
+#waitCourseNav1 .waitmenu a{color:#fff;}
+#waitCourseNav1 .waitmenu .wait1{color:#a2adb3;}
+
+#actionMore{width:100%;height:28px;line-height:28px;font-size:16px;margin-bottom:10px;border:1px solid #ccc;background:#f5f5f5;text-align:center;cursor:pointer;color:#6A7988;}
+
+.pagination
+{
+	overflow:hidden;
+	zoom:1;
+	font-size:12px;
+	
+}
+.pagination ul
+{
+	
+	overflow:hidden;
+	zoom:1;
+}
+.pagination div
+{
+	height:22px;
+	line-height:22px;
+}
+.pagination ul li
+{
+	list-style-type:none;
+	float:left;
+	
+	margin:0 2px;
+	height:22px;padding:0 3px;
+	background:#d3d3d3;
+	-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;
+}
+.pagination ul li a
+{
+	display:block;
+	text-decoration:none;
+	line-height:22px;
+	padding:0 8px;
+	text-align:center;
+	color:#fff;
+	outline:none;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;
+}
+.pagination ul .current
+{
+	padding:0 8px;
+	color:#FFF;
+	background-color:#87d1fe;
+	border-color:#4c8dc3;
+	text-align:center;
+	line-height:22px;
+	
+}
+.pagination ul .etc
+{
+    padding:0 2px;
+    color:#fff;
+    padding:0 3px;
+    
+    text-align:center;
+    line-height:22px;
+}
+.pagination ul .pageButton{text-align:center; display:block;background:#9dbccf; }
+.pagination ul .pageButton,.pagination ul .pageButton a
+{
+	padding:0;
+	width:45px;
+	height:22px;
+	line-height:22px;
+	background:#9dbccf;
+	color:#fff;	  
+}
+
+.pagination ul .disabled
+{
+	display:block;
+	text-decoration:none;
+	text-align:center;	
+}
+.pagination .first{}

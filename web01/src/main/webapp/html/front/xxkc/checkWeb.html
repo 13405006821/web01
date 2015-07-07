@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>学习课程--查看网页</title>
+	<link rel="stylesheet" href="../../../public/style/reset.css" />
+	<link rel="stylesheet" href="../../../public/style/common.css" />
+	<link rel="stylesheet" href="../../../public/style/style.css" />
+	<script src="../../../public/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="inner">
+			<h1>生态学习资源系统</h1>
+			<form action="#" method="get">
+				<input type="text" name="search" class="search" />
+				<input type="submit" value="" class="sbtn" />
+			</form>
+			<a href="#" id="login">登陆</a>
+			<a href="#" id="record">记录</a>
+		</div>
+	</div>
+
+	<div class="nav">
+		<ul class="clearfix">
+			<li class="selected"><a href="#">首页</a></li>
+			<li><a href="#">精品课程<span></span></a></li>
+			<li><a href="#">微课程</a></li>
+			<li><a href="#">学习资源</a></li>
+			<li><a href="#">才艺展示</a></li>
+			<li><a href="#">辅导课程</a></li>
+			<li><a href="#">同步课堂</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="aside">
+			<div class="tcMsg">
+				<img src="../../../public/image/testImg/tcPhoto.png" alt="" width="189px;" height="189px;" />
+				<h4><span>我的主页</span>张亚杰</h4>
+				<span class="area">江苏</span>
+				<span class="school">景程中学</span>
+			</div>
+			<ul class="asideNav">
+				<li class="learnClass"><a class="selected" href="">学习课程</a></li>
+				<li class="onlineTest"><a href="">在线测试</a></li>
+				<li class="onlineTeach"><a href="">在线辅导</a></li>
+				<li class="onlineClass"><a href="">同步课堂</a></li>
+				<li class="mySource"><a href="">我的资源</a></li>
+				<li class="myInteraction"><a href="">我的互动</a></li>
+				<li class="myClass"><a href="">我的班级</a></li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<h4 class="contentNav"><a class="backup" href="#">&lt;&lt;返回</a>查看网页</h4>
+
+			<div class="cwN">
+				<h5 class="checkTab">
+					<a href="javascript:;" class="selected">查看网页</a>
+					<a href="javascript:;">显示网页源码</a>
+				</h5>
+				<div class="webContent">
+					<h5>写好英语作文的10个简单原则 不被内容迷惑</h5>
+					<p class="abstract">写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑</p>
+					<div class="zhengwen">
+						这里是正文
+					</div>
+				</div>
+				<div class="webContent hidden">
+					<h5>写好英语作文的10个简单原则 不被内容迷惑</h5>
+					<p class="abstract">写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑写好英语作文的10个简单原则 不被内容迷惑</p>
+					<div class="code">
+						这里是源代码
+					</div>
+				</div>
+			</div>
+
+			
+
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".checkTab a").click(function(){
+				var thisWrap = $(this).parents(".cwN");
+					thisWrap.find(".selected").removeClass("selected");
+					$(this).addClass("selected");
+				var thisCont = thisWrap.find(".webContent");
+				for(var i=0; i<thisCont.length; i++){
+					if(thisCont.eq(i).hasClass("hidden")){
+					 	thisCont.eq(i).removeClass("hidden")
+					 }else{
+					 	thisCont.eq(i).addClass("hidden")
+					 }
+				};
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* 我的班级 */
+.classList{padding:25px 25px 0;margin-bottom:25px;}
+.classList a{float: left; display: inline;font-size: 14px;height: 20px;line-height: 20px;margin: 0 8px;padding: 2px 8px;color:#9B9B9B;}
+.classList .selected{ background: #53BCFF;color: #fff; }
+
+.classWrap{overflow:hidden;zoom:1;border:1px solid #CFCFCF;font-size:14px;background:#fff;margin-bottom:20px;}
+.classWrap img{width:60px;height:60px;vertical-align:middle;}
+.classSide{float:left;width:170px;border-right:1px solid #CFCFCF;margin-right:-1px;_margin-right:-4px;}
+.teaHead,.stuHead{height:40px;line-height:40px;text-indent:15px;font-size:16px;color:#566b86;background:#E7E7E7;}
+.stu_total{position:absolute;right:30px;top:10px;color:#A0A0A0;}
+.classMain{position:relative;border-left:1px solid #CFCFCF;overflow:hidden;zoom:1;}
+.teaBox{padding:20px 20px 0;}
+.teaBox dl{margin-bottom:20px;overflow:hidden;zoom:1;color:#9b9b9b;}
+.teaBox dt{float:left;display:inline;margin-right:10px;}
+.teaBox dd{overflow:hidden;zoom:1;}
+.teaBox dd a{display:inline-block;height:17px;line-height:17px;overflow:hidden;color:#6A7988;}
+.teaBox dd p{height:32px;line-height:16px;overflow:hidden;}
+.stuCont{padding:20px;}
+.stuList li{float:left;display:inline;margin:0 5px 10px;text-align:center;width:60px;height:80px;overflow:hidden;word-wrap:break-word;}
+.stuList li img{display:block;}
+.stuList li a{color:#9b9b9b;}

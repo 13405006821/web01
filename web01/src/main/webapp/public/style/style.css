@@ -1,0 +1,1740 @@
+@charset "UTF-8";
+/*个人中心共同部分*/
+.container {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	border-bottom: 1px solid #CFCFCF;
+}
+
+.aside {
+	width: 205px;
+	float: left;
+	background-color: #3196c9;
+	color: #a6e2ff;
+	padding-bottom: 1000em;
+	margin-bottom: -1000em;
+}
+
+.content {
+	float: left;
+	width: 99%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-left: none;
+	background-color: #f8f7f7;
+	padding-bottom: 1000em;
+	margin-bottom: -1000em;
+}
+
+.tcMsg {
+	background-color: #fff;
+	width: 189px;
+	border: 8px solid #3196c9;
+	color: #888;
+}
+
+.tcMsg h4 {
+	padding: 0;
+	font-size: 20px;
+	color: #3e5367;
+	/*background: url(../image/sm.gif) no-repeat 72px 50%;*/
+}
+
+.tcMsg h4.woman {
+	background: url(../image/sw.gif) no-repeat 72px 50%;
+}
+
+.tcMsg h4 span a {
+	float: right;
+	font-size: 14px;
+	line-height: 30px;
+	color: #888;
+}
+
+.tcMsg .area,.tcMsg .school {
+	display: block;
+	height: 30px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.tcMsgIn {
+	padding: 0 10px 10px 10px;
+}
+/*.asideNav{padding-top: 10px;}*/
+
+/*#nav_userName{background: url(../image/sm.gif) no-repeat 100% 5px;padding-right: 20px;}*/
+#nav_userName b,#nav_userName img {
+	display: inline-block;
+}
+
+#nav_userName img {
+	vertical-align: middle;
+}
+
+.asideNav li {
+	width: 205px;
+	height: 60px;
+	font-size: 20px;
+	border-top: 1px solid #55a4cd;
+	border-bottom: 1px solid #308bba;
+}
+
+.asideNav li a {
+	display: block;
+	padding-left: 88px;
+	height: 60px;
+	line-height: 60px;
+	color: #a8e3ff;
+	background: url(../image/asideNav.png) no-repeat 43px 15px;
+	_background: url(../image/asideNav.gif) no-repeat 43px 15px
+}
+
+.asideNav li.learnClass a {
+	background-position: 43px 15px;
+}
+
+.asideNav li.onlineTest a {
+	background-position: 43px -45px;
+}
+
+.asideNav li.onlineTeach a {
+	background-position: 43px -105px;
+}
+
+.asideNav li.onlineClass a {
+	background-position: 43px -165px;
+}
+
+.asideNav li.mySource a {
+	background-position: 43px -225px;
+}
+
+.asideNav li.myInteraction a {
+	background-position: 43px -285px;
+}
+
+.asideNav li.myClass a {
+	background-position: 43px -345px;
+}
+
+.asideNav li.learnClass a.selected {
+	color: #fff;
+	background-position: -166px 15px;
+	background-color: #2286b8;
+}
+
+.asideNav li.onlineTest a.selected {
+	color: #fff;
+	background-position: -166px -45px;
+	background-color: #2286b8;
+}
+
+.asideNav li.onlineTeach a.selected {
+	color: #fff;
+	background-position: -166px -105px;
+	background-color: #2286b8;
+}
+
+.asideNav li.onlineClass a.selected {
+	color: #fff;
+	background-position: -166px -165px;
+	background-color: #2286b8;
+}
+
+.asideNav li.mySource a.selected {
+	color: #fff;
+	background-position: -166px -225px;
+	background-color: #2286b8;
+}
+
+.asideNav li.myInteraction a.selected {
+	color: #fff;
+	background-position: -166px -285px;
+	background-color: #2286b8;
+}
+
+.asideNav li.myClass a.selected {
+	color: #fff;
+	background-position: -166px -345px;
+	background-color: #2286b8;
+}
+
+.contentNav {
+	height: 40px;
+	line-height: 40px;
+	font-weight: normal;
+	font-size: 18px;
+	background: url(../image/learnClass.png) no-repeat 3px 6px;
+	padding-left: 40px;
+	padding-right: 10px;
+	color: #888;
+	border-bottom: 2px solid #90D964;
+	margin-bottom: 20px;
+}
+
+.contentNav .backup {
+	color: #666;
+	float: right;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.onlineTest {
+	background-position: 3px -54px;
+}
+
+.onlineTutor {
+	background-position: 3px -114px;
+}
+
+.tbClassroom {
+	background-position: 3px -174px;
+}
+
+.mySource {
+	background-position: 3px -234px;
+}
+
+.myHd {
+	background-position: 3px -294px;
+}
+
+.myclass {
+	background-position: 3px -354px;
+}
+
+.navTab {
+	padding: 0 20px;
+}
+
+.navTab a {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background: #87D1FE;
+	padding: 0 20px;
+	margin: 0 2px;
+	border-radius: 5px 5px 0 0;
+}
+
+.navTab .currTab {
+	background: #90D964;
+}
+
+.tabBox {
+	display: none;
+	margin-top: 20px;
+}
+
+.currBox {
+	display: block;
+}
+
+.detailBox {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.detailBox li {
+	zoom: 1;
+	overflow: hidden;
+	color: #888;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.checkDetail li p {
+	color: #666;
+}
+
+.checkDetail li p a.downLink {
+	color: #BD3A1C;
+}
+
+.detailBox .cName {
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding-right: 25px;
+	vertical-align: middle;
+}
+
+.detailBox .cCont {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.detailBox .cCont b {
+	color: #BD3A1C;
+	font-weight: normal;
+}
+
+.submitBtn {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.submitBtn .btn {
+	margin: 0 30px;
+}
+
+.submitBtn .cancel {
+	color: #888;
+	font-size: 14px;
+}
+
+.hidden {
+	display: none;
+}
+
+.longTitle {
+	width: 690px;
+	font-size: 14px;
+}
+
+/*排除easy ui datagrid*/
+table:not ('.easyui-datagrid '){
+	border-collapse: collapse;
+	width: 99%;
+	text-align: center;
+}
+
+table th,table td {
+	border: 1px solid #ccc;
+	padding: 5px 20px;
+}
+
+table th {
+	background-color: #ddd;
+}
+
+.normalTable {
+	width: 99%;
+	text-align: center;
+}
+
+.normalTable th,.normalTable td {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.normalTable th {
+	background-color: #e7e7e7;
+	color: #566b86;
+}
+
+.normalTable td {
+	background-color: #fff;
+}
+
+/*老师、学生空间首页公用*/
+.contentMiddle {
+	width: 710px;
+	float: left;
+	color: #9b9b9b;
+}
+
+.contentRight {
+	overflow: hidden;
+	padding-left: 10px;
+	color: #9b9b9b;
+}
+
+.contentMiddle h4 {
+	background-color: #eee;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+.contentMiddle h4 a {
+	font-size: 12px;
+}
+/*.workSpace a{width: 80px;height: 100px;display: inline-block;text-align: center;margin-left: 52px;margin-top: 20px;}
+.workSpace a img{width: 80px;height: 80px;border: 1px solid #00f;display: inline-block;}*/
+.workSpace ul li {
+	background: transparent url("../image/nav.png") no-repeat 0 -430px;
+	display: inline;
+	float: left;
+	width: 102px;
+	height: 102px;
+	line-height: 160px;
+	margin: 10px;
+	text-align: center;
+}
+
+.workSpace ul li a {
+	color: #fff;
+	background: url("../image/nav.png") no-repeat 28px -520px;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 102px;
+	overflow: hidden;;
+}
+
+.workSpace ul li a.newClass {
+	background-position: 28px -560px;
+}
+
+.workSpace ul li a.addPaper {
+	background-position: -320px -660px;
+}
+
+.workSpace ul li a.newPaper {
+	background-position: -320px -560px;
+}
+
+.workSpace ul li a.newResource {
+	background-position: 28px -760px;
+}
+
+.workSpace ul li a.newMisson {
+	background-position: -320px -760px;
+}
+
+.tabMenu {
+	margin-left: 50px;
+	display: inline-block;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	width: 123px;
+	background: url(../image/timemenu.png) no-repeat 0 0;
+}
+
+.tabMenu a {
+	font-weight: normal;
+}
+
+.tabMenu .clicked {
+	color: #fff;
+	outline: none;
+}
+
+.onlineClassTable .dateSer {
+	float: right;
+	display: inline;
+	padding: 0 0 0 24px;
+	background: url(../image/time.jpg) no-repeat 0 50%;
+	color: #4693c7;
+	border: none;
+	outline: none;
+	line-height: 30px;
+	height: 30px;
+}
+
+.onlineClassTable .classList-index {
+	display: none;
+}
+
+.classList-index li {
+	padding: 10px 0 20px 0;
+}
+
+.onlineClassTable .currIn {
+	display: block;
+}
+
+.datePic {
+	width: 60px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: #90d964;
+	color: #fff;
+	text-align: center;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.datePic dt {
+	font-size: 28px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #70cf37;
+}
+
+.datePic dd {
+	border-top: 1px solid #b5ec93;
+	height: 20px;
+}
+
+.taskList {
+	padding-left: 80px;
+}
+
+.taskList dd a {
+	height: 30px;
+}
+
+.taskList dd span {
+	margin-right: 50px;
+}
+
+.taskList .setWidthP {
+	width: 300px;
+	display: inline-block;
+}
+
+.contentRight h4 {
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.contentRight .more {
+	float: right;
+	font-size: 14px;
+}
+
+.contentRight li {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.contentRight li a img {
+	float: left;
+	margin-right: 10px;
+	display: inline;
+}
+
+.contentRight .playIcon {
+	background: url(../image/talent-play.png) no-repeat scroll 0 50%
+		rgba(0, 0, 0, 0);
+	width: 20px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.techSourceCom .hidden {
+	display: none;
+}
+
+.souHoverTip img {
+	float: left;
+	margin: 0 10px 0 0;
+	display: inline;
+}
+
+/*学习课程*/
+.secTitle h5 {
+	padding-bottom: 10px;
+	font-weight: normal;
+}
+
+.secTitle h5 a {
+	font-size: 16px;
+	color: #888;
+	margin-right: 10px;
+}
+
+.secTitle h5 a.selected {
+	color: #3196C9;
+}
+
+.secTitle .createSort {
+	float: right;
+}
+
+.listBox {
+	border-top: 1px dashed #aaa;
+	border-bottom: 1px dashed #aaa;
+	font-size: 16px;
+	padding: 5px 0;
+}
+
+.listBox h4 {
+	color: #666;
+	padding-left: 18px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.listBox h5 {
+	color: #666;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.listBox .controlBar {
+	float: right;
+	color: #666;
+	width: 240px;
+}
+
+.listBox h4 .edit2 {
+	
+}
+
+.listBox ul {
+	padding-left: 30px;
+	display: none;
+}
+
+.listBox ul li a {
+	color: #888;
+	line-height: 30px;
+}
+
+.listTip {
+	display: none;
+}
+
+.editBar {
+	float: right;
+	width: 160px;
+}
+
+.listTip .num i {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../image/circle.png) no-repeat 0 0;
+	padding-right: 5px;
+}
+
+.listTip .approve i {
+	
+}
+
+.listTip .unApprove i {
+	background-position: 0 -20px;
+}
+
+.listTip .approveIng i {
+	background-position: 0 -40px;
+}
+
+.listBox ul li {
+	zoom: 1;
+}
+
+.listBox ul li:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+/*学习课程--往届课程表*/
+.history-classTable li {
+	height: 30px;
+	line-height: 30px;
+}
+
+.history-classTable li a {
+	font-size: 16px;
+}
+
+/*查看测验*/
+.checkDetail .downLoad {
+	color: #3294c7;
+}
+
+.checkDetail .nums {
+	color: #bd3a1c;
+}
+
+.submitBox {
+	text-align: center;
+}
+
+/*查看讨论*/
+.disSubmit {
+	width: 550px;
+	margin: 20px auto;
+}
+
+.disSubmit textarea {
+	resize: none;
+}
+
+.disSubmit .btn {
+	vertical-align: bottom;
+}
+
+.disSubmit .face {
+	display: block;
+	text-align: left;
+	background: url(../image/face.png) no-repeat 0 0;
+	width: 30px;
+	padding-left: 25px;
+	height: 25px;
+	line-height: 25px;
+	margin-top: 5px;
+	cursor: pointer;
+	color: #888;
+}
+
+.leaveMsg {
+	width: 880px;
+	margin: 0 auto;
+	border-top: 1px dashed #ccc;
+}
+
+.leaveMsg .msgBox {
+	border-bottom: 1px dashed #ccc;
+	padding: 20px 10px 0 0;
+	position: relative;
+	font-size: 14px;
+}
+
+.leaveMsg .user {
+	width: 80px;
+	float: left;
+}
+
+.leaveMsg .user span {
+	display: block;
+	text-align: center;
+}
+
+.leaveMsg .userMsg {
+	overflow: hidden;
+	zoom: 1;
+	padding-left: 10px;
+}
+
+.leaveMsg .userMsg .time {
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.comment-g li {
+	overflow: hidden;
+}
+
+.comment-g .commentOne {
+	display: none;
+	padding-left: 30px;
+}
+
+.comment-g .commentOne li {
+	border-bottom: 1px solid #eee;
+	padding: 5px;
+}
+
+.comment-g .commentOne .face {
+	display: inline-block;
+	text-align: left;
+	background: url(../image/face.png) no-repeat 0 0;
+	width: 30px;
+	padding-left: 25px;
+	height: 25px;
+	line-height: 25px;
+	margin-top: 5px;
+	cursor: pointer;
+	color: #888;
+}
+
+.comment-g .replyBox {
+	width: 500px;
+	margin: 30px 0;
+}
+
+.comment-g .replyBox textarea {
+	width: 500px;
+	resize: none;
+	margin: 5px 0;
+}
+
+.comment-g .replyBox p a {
+	display: inline-block;
+}
+
+.comment-g .replyBox .replyBtn {
+	float: right;
+}
+
+.comment-g .personPic {
+	float: left;
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	margin-right: 20px;
+	color: #3296c8;
+}
+
+.comment-g .personPic img {
+	width: 40px;
+	height: 40px;
+}
+
+.comment-g .commentTalk {
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.comment-g .commentTalk .commentDate {
+	display: block;
+	padding-top: 25px;
+	color: #888;
+}
+
+.comm {
+	background: url("../img/pub/comment.png") no-repeat scroll 0 0;
+	padding-left: 20px;
+	color: #9b9b9b;
+	margin-left: 10px;
+}
+/*查看投票*/
+.voteNotes {
+	overflow: hidden;
+	margin: 20px 0;
+}
+
+.voteNotes span,.voteNotes label {
+	vertical-align: middle;
+}
+/*.voteNotes label{width: 300px;display: inline-block;}*/
+.voteNotes label .cont {
+	width: 280px;
+	padding-left: 5px;
+	display: inline-block;
+	word-wrap: break-word;
+}
+
+.allLen {
+	display: inline-block;
+	width: 270px;
+	background-color: #fff;
+	height: 25px;
+}
+
+.voteLen {
+	display: inline-block;
+	height: 25px;
+	background-color: #3196c9;
+}
+
+.voteNotes b.percent {
+	color: #666;
+	width: 50px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.voteNotes b.nums {
+	color: #3196c9;
+}
+
+/*查看网页*/
+.cwN h5 {
+	height: 50px;
+}
+
+.cwN h5 a {
+	color: #2286B8;
+	line-height: 50px;
+	margin-right: 50px;
+	font-weight: normal;
+}
+
+.cwN h5 a.selected {
+	font-weight: bold;
+}
+
+.webContent {
+	padding: 5px 20px;
+}
+
+.webContent h5 {
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.webContent p.abstract {
+	border-bottom: 1px dashed #ccc;
+	text-indent: 2em;
+	font-size: 14px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.webContent .zhengwen,.webContent .code {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+/*查看文本 需要时在此添加*/
+
+/*查看问卷*/
+.qsTopMsg {
+	border-top: none;
+}
+
+.qsNums {
+	background-color: #ccc;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 25px;
+	font-size: 14px;
+}
+/*查看作业*/
+.subTable {
+	width: 99%;
+}
+
+.subTable th,.subTable td {
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.subTable th {
+	background-color: #ddd;
+}
+
+.subTable td#handle a {
+	color: #2286B8;
+}
+
+.underline {
+	border-bottom: 1px solid #ccc;
+}
+
+.noUnderline {
+	border-bottom: none;
+}
+/*查看批改弹出框*/
+.correct {
+	padding: 0 10px;
+}
+
+.correct li {
+	margin: 10px 0;
+}
+
+.correct .ckName {
+	width: 80px;
+	float: left;
+}
+
+.stAnswer {
+	width: 200px;
+	height: 80px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	overflow-y: auto;
+	word-break: break-all;
+}
+
+.correct button {
+	margin-left: 120px;
+}
+/*批改作业弹出框*/
+.ckName {
+	float: left;
+}
+
+.ckCont {
+	overflow-y: auto;
+	width: 350px;
+}
+
+textarea.ckCont {
+	width: 350px;
+	height: 60px;
+	resize: none;
+}
+
+input.score {
+	width: 50px;
+}
+
+/*个人测试试卷解析*/
+.subName {
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+
+.testPart {
+	font-size: 14px;
+}
+
+.testPart ul li label {
+	display: inline-block;
+	width: 100px;
+	padding-left: 20px;
+}
+
+.testPart ul li label.len60 {
+	width: 60px;
+}
+
+.knowledge {
+	margin: 30px 0;
+}
+
+.klgList a {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	background-color: #c6c6c6;
+}
+
+.klgList a.selected {
+	background-color: #90d964;
+}
+
+.klgCont {
+	border: 1px solid #ccc;
+	width: 720px;
+	height: 140px;
+	padding: 10px;
+}
+
+.timu {
+	position: relative;
+}
+
+.timu img {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/*互动评价*/
+.emMsg {
+	border-top: none;
+	width: 680px;
+	float: left;
+	background-color: #fff;
+}
+
+.emMsg h4,.leavers h4 {
+	background-color: #aaa;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px 5px 0 0;
+	padding-left: 10px;
+}
+
+.leavers {
+	overflow: hidden;
+	zoom: 1;
+	width: 250px;
+	margin-left: 684px;
+	background-color: #fff;
+}
+
+.leaverBox {
+	width: 240px;
+	margin: 0 auto;
+}
+
+.leaverMsg {
+	width: 60px;
+	float: left;
+	margin: 10px;
+	display: inline;
+	color: #9a9a9a;
+}
+
+.leavers img {
+	width: 60px;
+	height: 60px;
+}
+
+.leavers span {
+	display: block;
+	text-align: center;
+}
+
+/*没有留言模块时的参与评价人样式*/
+.leaversOnly {
+	width: auto;
+	margin-left: 0;
+}
+
+.leaversOnly .leaverBox {
+	margin: 0 auto;
+	width: 880px;
+}
+
+.evaluateList {
+	width: 450px;
+	word-break: break-all;
+	display: inline-block;
+}
+
+/*课程名称*/
+.className {
+	padding-left: 30px;
+	color: #59a9d2;
+}
+
+.className a {
+	color: #59a9d2;
+}
+
+.classManageS select {
+	float: right;
+	padding: 5px 10px;
+	margin-top: 20px;
+}
+
+.editBox {
+	background-color: #fff;
+	margin: 20px 0;
+	position: relative;
+}
+
+.editBoxCont {
+	font-size: 14px;
+	padding: 30px 40px 30px 20px;
+	height: 100%;
+}
+
+.editBoxCont h5 {
+	display: inline-block;
+}
+
+.editBox .rightEdit {
+	display: block;
+	width: 25px;
+	padding-left: 5px;
+	padding-top: 10px;
+	height: 90%;
+	background-color: #eee;
+	position: absolute;
+	top: 1px;
+	right: 2px;
+	text-align: center;
+}
+
+.editIcon {
+	background: url(../image/editor.png) no-repeat;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+.moveLeft {
+	background-position: -20px 0;
+}
+
+.edit {
+	background-position: 0 -120px;
+}
+
+.edit2 {
+	background-position: 0 -20px;
+}
+
+.shut {
+	background-position: 0 -40px;
+}
+
+.eye {
+	background-position: 0 -60px;
+}
+
+.eyeClose {
+	background-position: -20px -60px;
+}
+
+.moveUp {
+	background-position: -20px -100px;
+}
+
+.moveUpOff {
+	background-position: 0 -80px
+}
+
+.moveDown {
+	background-position: 0 -100px;
+}
+
+.moveDownOff {
+	background-position: -20px -80px;
+}
+
+.editBox p,.editBox ul {
+	text-indent: 2em;
+	margin-top: 20px;
+}
+
+.editBox select {
+	float: right;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+.addTheme {
+	color: #59a9d2;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+/*添加标签*/
+.addLabel .cCont li {
+	padding: 0;
+	height: 40px;
+}
+
+.tagDescribe {
+	width: 680px;
+	height: 300px;
+	font-size: 14px;
+}
+
+.selectRv {
+	width: 100px;
+	display: inline-block;
+}
+
+.receiverName { /*width: 610px;*/
+	background-color: #fff;
+	margin-right: 215px;
+	_background-color: #f8f7f7;
+	*background-color: #f8f7f7
+}
+
+.receiverName span {
+	display: block;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px 0 10px;
+	margin: 5px 0 0 5px;
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.receiverName span a {
+	background: url(../image/closeWhite.png) no-repeat 0 50%;
+	width: 12px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 3px;
+}
+
+select.showOrhide {
+	padding: 5px 10px;
+}
+
+/*添加互动评价*/
+.evaluation input {
+	width: 480px;
+	font-size: 14px;
+	padding: 5px;
+}
+
+/*添加课程类别*/
+li.styleType {
+	line-height: 30px;
+}
+
+li.styleType input {
+	width: 300px;
+	padding: 5px;
+	font-size: 14px;
+}
+
+li select {
+	padding: 5px 10px;
+}
+
+/*添加讨论区*/
+
+/*添加网页资源*/
+textarea.overview {
+	width: 690px;
+	height: 120px;
+}
+
+textarea.editWeb {
+	width: 690px;
+	height: 200px;
+}
+
+/*添加学习任务单*/
+.planBox {
+	margin-bottom: 30px;
+	font-size: 14px;
+}
+
+.planBox h5 {
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	color: #8e99a5;
+}
+
+.planBox h6 {
+	font-size: 16px;
+	line-height: 40px;
+	width: 900px;
+	font-weight: normal;
+	color: #8e99a5;
+}
+
+.planBox h6 span {
+	font-size: 14px;
+	color: #666;
+}
+
+.planBox label {
+	font-size: 16px;
+	color: #8e99a5;
+	margin-top: 20px;
+	display: block;
+}
+
+.planBox input {
+	width: 300px;
+	line-height: 14px;
+	font-size: 14px;
+}
+
+.planBox textarea {
+	width: 890px;
+	height: 100px;
+	font-size: 14px;
+}
+
+.contentList p {
+	color: #666;
+	text-indent: 1em;
+}
+
+.goalList span {
+	font-size: 12px;
+}
+
+/*添加在线测验*/
+/*添加在线测验弹出框*/
+.testContent {
+	padding: 10px;
+}
+
+.testSelect li {
+	height: 40px;
+}
+
+.testSelect label {
+	margin-left: 2px;
+}
+
+.testSelect input {
+	padding: 5px;
+	text-align: center;
+}
+
+.testSer {
+	float: right;
+	margin-right: 60px;
+}
+
+.deleteTest {
+	background: url(../image/closeWhite.png) no-repeat 0 0;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin-right: 20px;
+}
+/*添加作业*/
+ul.workAttach li span {
+	margin: 0 20px;
+}
+
+.uploadIng {
+	color: #59A9D2;
+}
+
+.cCont b.orange {
+	color: orange;
+}
+
+.cancelUpload a,.deleteUpload a,.uploadFail {
+	color: #b01111;
+}
+
+.uploadDone {
+	color: #90D964;
+}
+
+/*在线测验统计*/
+.classNav a {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 10px 10px 0;
+	color: #fff;
+	background-color: #2286B8;
+	padding: 0 20px;
+	font-size: 14px;
+}
+
+.detailStat table {
+	width: 940px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*我的资源开始
+---------------------------------------------*/
+/*上传资源*/
+.upload {
+	background-image: url(../image/upload.png);
+}
+
+.typeTitle {
+	margin-right: 20px;
+}
+
+.uploadBox {
+	border: none;
+}
+
+.chapterDetial {
+	border: 1px solid #ccc;
+	float: left;
+	background-color: #fff;
+	width: 770px;
+	padding: 15px;
+}
+
+.chapterDetial select {
+	font-size: 14px;
+}
+
+.chapterDetial button {
+	display: block;
+	width: 81px;
+	height: 26px;
+	background: url(../image/addChapter.png) no-repeat 0 0;
+	border: none;
+	cursor: pointer;
+	margin: 20px 0;
+}
+
+.chapCrumb {
+	display: block;
+	height: 20px;
+	width: 610px;
+	background-color: #d1e5f2;
+	border: 1px dashed #A8E3FF;
+	margin-bottom: 5px;
+}
+
+.chapCrumb a {
+	color: #666;
+}
+
+.chapCrumb .close {
+	width: 20px;
+	height: 20px;
+	float: right;
+	background: url(../image/closed.png) no-repeat 50% 50%;
+}
+
+.txt {
+	vertical-align: middle;
+}
+
+.cUpload p {
+	height: 40px;
+}
+
+.per {
+	display: inline-block;
+	width: 100px;
+}
+
+.uploadSm {
+	margin-left: 200px;
+}
+
+/*我的资源*/
+.mySource {
+	background-position: 3px -234px;
+}
+
+.uploadSource {
+	float: right;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 20px 10px 34px;
+	background: #ef9b0f url(../image/whiteUpload.png) no-repeat 18px 50%;
+}
+
+.sourceSel {
+	padding: 20px 0;
+}
+
+.sourceSel li {
+	padding: 10px;
+}
+
+.sourceSel li select {
+	margin-right: 20px;
+}
+
+.sourceSel .souInput {
+	width: 260px;
+}
+
+.sourceSel .souBtn {
+	background-color: #87D1FE;
+	vertical-align: middle;
+}
+
+.inNavTab {
+	
+}
+
+.inNavTab a {
+	color: #888;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 10px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.inNavTab .inCurrTab {
+	color: #666;
+	border-bottom: 3px solid #90d964;
+}
+
+.inTabBox {
+	display: none;
+}
+
+.inCurrBox {
+	display: block;
+}
+
+.sourceList {
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	position: relative;
+}
+
+.sourcePhoto {
+	float: left;
+	margin: 30px 20px;
+}
+
+.sourceIcon {
+	background: url(../image/souceIcon.png) no-repeat 0 0;
+	display: block;
+	float: left;
+	width: 72px;
+	height: 72px;
+	margin: 40px 20px;
+}
+
+.zipIcon {
+	background-position: 0 -100px;
+}
+
+.wordIcon {
+	background-position: 0 -200px;
+}
+
+.movIcon {
+	background-position: 0 -300px;
+}
+
+.sourceDetail {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.sourceDetail ul li span {
+	margin-right: 20px;
+}
+
+.sourceDetail .sourceEdit {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px 20px;
+	margin: 2px;
+}
+
+.sourceDetail .sourceEdit a {
+	color: #666;
+}
+
+.sourceDetail ul {
+	padding: 20px 0;
+}
+
+.sourceDetail .name {
+	font-size: 16px;
+	padding: 10px 0;
+}
+
+.waitCheck {
+	position: absolute;
+	left: 750px;
+	top: 60px;
+	font-size: 14px;
+}
+
+.deleteSource {
+	position: absolute;
+	left: 750px;
+	top: 80px;
+	font-size: 14px;
+}
+
+/* 在线辅导 */
+.setWidth {
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+
+.workBox {
+	width: 450px;
+	height: 230px;
+	float: left;
+	overflow: hidden;
+}
+
+.workBox .workPic {
+	float: left;
+}
+
+.workBox p {
+	line-height: 30px;
+}
+
+.workDetail {
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.workDetail p {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.workDetail .title a {
+	font-size: 16px;
+	color: #6c7a8a;
+}
+
+/* 课程安排 */
+h5.courseName {
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	margin: 15px 0;
+	font-weight: normal;
+}
+
+/*同步课堂*/
+.tbContent {
+	padding: 10px;
+}
+
+.tbSelect {
+	margin-top: 15px;
+}
+
+.tbSelect li {
+	height: 40px;
+}
+
+.tbSelect label {
+	margin-left: 2px;
+}
+
+.tbSelect input {
+	padding: 5px;
+	text-align: center;
+}
+
+input.tbInput {
+	width: 120px;
+	text-align: left;
+}
+/*.tbSer{float: right;margin-right: 10px;margin-top: 5px;}*/
+.selectAll {
+	margin-left: 4px;
+}
+/*同步课堂弹出框*/
+.detailBox div.studentCount {
+	border: 1px solid #ccc;
+	margin-right: 20px;
+	height: 120px;
+	overflow-y: auto;
+	word-break: break-all;
+}
+
+/*在线测试开始
+------------------------------------*/
+/*在线测试*/
+.testZj {
+	float: right;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 15px;
+	padding: 2px 10px;
+	margin-right: 5px;
+}
+
+.shareExam .testSelect {
+	margin-top: 15px;
+}
+
+/*手动组卷*/
+.testName {
+	padding: 5px 0;
+	width: 300px;
+	font-size: 14px;
+}
+
+.totalTopic {
+	padding: 5px 0 0 30px;
+}
+
+.notes {
+	text-align: center;
+}
+
+/*系统组卷*/
+.blockCont {
+	margin-top: 20px;
+}
+
+.blockCont .smallBlock {
+	padding: 2px 2px 2px 5px;
+	background-color: #d1e4f0;
+	border: 1px dashed #54bdff;
+	display: inline-block;
+}
+
+.blockCont .smallBlock a {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url(../image/closed.png) no-repeat 0 0;
+	margin-left: 10px;
+}
