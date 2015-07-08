@@ -15,7 +15,7 @@ import com.whalin.MemCached.SockIOPool;
 @Service("memcacheService")
 public class MemcacheServiceImpl implements IMemcacheService {
 	
-	private MemCachedClient mcc = null;
+	private MemCachedClient memCachedClient = null;
 	
 	@Resource
 	private MemcacheConfig config;
@@ -44,12 +44,13 @@ public class MemcacheServiceImpl implements IMemcacheService {
 	}
 	
 	public MemCachedClient getCache() throws Exception {
-		if (mcc == null) {
-			boolean r = initPoolAndClient();
-			if (!r)
+		if (memCachedClient == null) {
+			boolean result = initPoolAndClient();
+			if (!result) {
 				throw new Exception("Cache初始化错误!");
+			}
 		}
-		return mcc;
+		return memCachedClient;
 	}
 
 	private synchronized boolean initPoolAndClient() {
@@ -86,7 +87,7 @@ public class MemcacheServiceImpl implements IMemcacheService {
 		pool.setSocketConnectTO(config.getSocketConnectTO());
 		pool.initialize();
 
-		mcc = new MemCachedClient(true);
+		memCachedClient = new MemCachedClient(true);
 		return true;
 	}
 }
