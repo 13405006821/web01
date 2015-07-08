@@ -5,6 +5,6 @@
 		<title>测试缓存</title>
 	</head>
 	<body>
-		${cache }
+		${ehcache }
 	</body>
 </html>

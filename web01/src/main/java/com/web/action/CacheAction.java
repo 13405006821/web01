@@ -23,7 +23,7 @@ public class CacheAction extends BaseAction {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String cache;
+	private String ehcache;
 	
 	@Resource
 	private IEhcacheService cacheService;
@@ -33,15 +33,15 @@ public class CacheAction extends BaseAction {
 		if(!cacheService.contains(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY)){
 			cacheService.setValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY, "测试测试四川省城市测试测试测试车测试陈思成");
 		}
-		cache = cacheService.getValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY).toString();
+		ehcache = cacheService.getValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY).toString();
 		return "cache";
 	}
 
-	public String getCache() {
-		return cache;
+	public String getEhcache() {
+		return ehcache;
 	}
 
-	public void setCache(String cache) {
-		this.cache = cache;
+	public void setEhcache(String ehcache) {
+		this.ehcache = ehcache;
 	}
 }
