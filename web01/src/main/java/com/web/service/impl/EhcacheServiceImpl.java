@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 
 import com.web.service.IEhcacheService;
 
-@Service("cacheService")
+@Service("ehcacheService")
 public class EhcacheServiceImpl implements IEhcacheService {
 	
 	@Resource
 	private CacheManager cacheManager;
 	
-	private Cache getCache(String cacheName){
+	private synchronized Cache getCache(String cacheName){
 		return cacheManager.getCache(cacheName);
 	}
 

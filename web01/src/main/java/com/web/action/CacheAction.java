@@ -26,14 +26,14 @@ public class CacheAction extends BaseAction {
 	private String ehcache;
 	
 	@Resource
-	private IEhcacheService cacheService;
+	private IEhcacheService ehcacheService;
 	
 	@Override
 	public String execute() throws Exception {
-		if(!cacheService.contains(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY)){
-			cacheService.setValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY, "测试测试四川省城市测试测试测试车测试陈思成");
+		if(!ehcacheService.contains(Constants.EHCACHE_TEST, Constants.EHCACHE_TEST_KEY_TEST)){
+			ehcacheService.setValue(Constants.EHCACHE_TEST, Constants.EHCACHE_TEST_KEY_TEST, "测试ehcache");
 		}
-		ehcache = cacheService.getValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY).toString();
+		ehcache = ehcacheService.getValue(Constants.EHCACHE_TEST, Constants.EHCACHE_TEST_KEY_TEST).toString();
 		return "cache";
 	}
 
