@@ -5,7 +5,7 @@
     <!-- <diskStore path="java.io.tmpdir" /> -->
     <!-- <diskStore path="E:/cachetmpdir" /> -->
 	
-	<diskStore path="D:/cachetmpdir" />
+	<diskStore path="D:/cache" />
 	
     <!--
     name：Cache的唯一标识

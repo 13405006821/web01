@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring-hibernate.xml", "classpath:spring.xml" })
 public class WebServiceTest extends AbstractJUnit4SpringContextTests {
+
 	@Resource
 	private CacheManager cacheManager;
 
@@ -26,11 +27,11 @@ public class WebServiceTest extends AbstractJUnit4SpringContextTests {
 			if (element == null) {
 				element = new Element("key", "asdadadaddadadad");
 				testCache.put(element);
-				System.out.println("无法从缓存中取到");
+				System.out.println("无法从缓存中取到！");
 			} else {
 				String val = (String) element.getValue();
 				System.out.println(val);
-				System.out.println("从缓存中取到");
+				System.out.println("从缓存中取到！");
 			}
 		}
 	}
