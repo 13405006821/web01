@@ -12,7 +12,7 @@ public interface ICacheService {
 	 * @param cacheKey
 	 * @return
 	 */
-	boolean isCacheContainKey(String cacheName, String cacheKey);
+	boolean contains(String cacheName, String cacheKey);
 	
 	/**
 	 * cache给对应key设置值
@@ -20,7 +20,7 @@ public interface ICacheService {
 	 * @param cacheKey
 	 * @return
 	 */
-	void setCacheContainKey(String cacheName, String cacheKey, Object cacheValue);
+	void setValue(String cacheName, String cacheKey, Object cacheValue);
 
 	/**
 	 * 获取cache key对应值
@@ -28,5 +28,5 @@ public interface ICacheService {
 	 * @param cacheKey
 	 * @return
 	 */
-	Object getCacheContainKey(String cacheName, String cacheKey);
+	Object getValue(String cacheName, String cacheKey);
 }

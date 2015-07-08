@@ -30,10 +30,10 @@ public class CacheAction extends BaseAction {
 	
 	@Override
 	public String execute() throws Exception {
-		if(!cacheService.isCacheContainKey(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY)){
-			cacheService.setCacheContainKey(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY, "测试测试四川省城市测试测试测试车测试陈思成");
+		if(!cacheService.contains(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY)){
+			cacheService.setValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY, "测试测试四川省城市测试测试测试车测试陈思成");
 		}
-		cache = cacheService.getCacheContainKey(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY).toString();
+		cache = cacheService.getValue(Constants.CACHE_TEST, Constants.CACHE_TEST_KEY).toString();
 		return "cache";
 	}
 

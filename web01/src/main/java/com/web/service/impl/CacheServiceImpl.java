@@ -21,7 +21,7 @@ public class CacheServiceImpl implements ICacheService {
 	}
 
 	@Override
-	public boolean isCacheContainKey(String cacheName, String cacheKey) {
+	public boolean contains(String cacheName, String cacheKey) {
 		Cache cache = getCache(cacheName);
 		Element element = cache.get(cacheKey);
 		if (element == null) {
@@ -32,14 +32,14 @@ public class CacheServiceImpl implements ICacheService {
 	}
 
 	@Override
-	public void setCacheContainKey(String cacheName, String cacheKey, Object cacheValue) {
+	public void setValue(String cacheName, String cacheKey, Object cacheValue) {
 		Cache cache = getCache(cacheName);
 		Element element = new Element(cacheKey, cacheValue);
 		cache.put(element);
 	}
 
 	@Override
-	public Object getCacheContainKey(String cacheName, String cacheKey) {
+	public Object getValue(String cacheName, String cacheKey) {
 		Cache cache = getCache(cacheName);
 		Element element = cache.get(cacheKey);
 		return element.getValue();
