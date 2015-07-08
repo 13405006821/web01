@@ -8,7 +8,7 @@ import org.apache.struts2.convention.annotation.Result;
 
 import com.base.action.BaseAction;
 import com.base.util.Constants;
-import com.web.service.ICacheService;
+import com.web.service.IEhcacheService;
 
 /**
  * 缓存 action
@@ -26,7 +26,7 @@ public class CacheAction extends BaseAction {
 	private String cache;
 	
 	@Resource
-	private ICacheService cacheService;
+	private IEhcacheService cacheService;
 	
 	@Override
 	public String execute() throws Exception {

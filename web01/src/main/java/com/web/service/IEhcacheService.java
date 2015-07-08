@@ -4,7 +4,7 @@ package com.web.service;
  * 缓存service接口
  * @author Liup
  */
-public interface ICacheService {
+public interface IEhcacheService {
 	
 	/**
 	 * cache是否包含对应key

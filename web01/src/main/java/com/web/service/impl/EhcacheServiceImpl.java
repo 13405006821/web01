@@ -8,10 +8,10 @@ import net.sf.ehcache.Element;
 
 import org.springframework.stereotype.Service;
 
-import com.web.service.ICacheService;
+import com.web.service.IEhcacheService;
 
 @Service("cacheService")
-public class CacheServiceImpl implements ICacheService {
+public class EhcacheServiceImpl implements IEhcacheService {
 	
 	@Resource
 	private CacheManager cacheManager;
