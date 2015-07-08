@@ -57,6 +57,7 @@
 <pg:pager export="offset,currentPageNumber=pageNumber" items="${count}" isOffset="true" 
 	maxPageItems="${pageSize}" maxIndexPages="${pageSize}" scope="request" index="center" url="systemFunction!table.action">
 	<pg:param name="functionContent" value="${functionContent }" /> 
+	<pg:param name="index" value="${index }" /> 
 	<jsp:include page="/pages/base/ajaxPage.jsp" flush="true">
 		<jsp:param value="listData" name="domId" />
 	</jsp:include>
