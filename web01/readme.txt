@@ -4,3 +4,4 @@
 4.ajax html
 5.加入ehcache
 6.加入memcached
+6.加入cxf
